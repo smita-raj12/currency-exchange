@@ -5,23 +5,25 @@ import './css/styles.css';
 import CurrencyService from './currency.service.js';
 
 function clearFields() {
-  $('#currency').val("");
+  $('#currency').text("");
   $('.showErrors').text("");
   $('.rupees').text("");
 }
 
 function getElements(response) {
-  if (response.conversion_rates.USD === 1) {
-    $('#rupees').text(response.conversion_rates.INR);
-  } else {
-    $('.showErrors').text(`There was an error: ${response.message}`);
-  }
+    let amount =  parseInt($('#currency').val());
+    if(response.conversion_rates.USD >= 1){
+      const indianRupees = amount * response.conversion_rates.INR;
+      $('#rupees').text(indianRupees);
+    } else {
+      $('.showErrors').text(`There was an error: ${response.message}`);
+    }
 }
 
 $(document).ready(function() {
   $('#currencycheck').click(function() {
     let amount = $('#currency').val();
-    clearFields();
+    clearFields();  
     CurrencyService.getCurrency(amount)
       .then(function(response) {
         getElements(response);
