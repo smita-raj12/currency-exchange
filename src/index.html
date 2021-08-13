@@ -11,11 +11,12 @@
         <div class="col-md-4">
           <div class="form-group">
             <label for="currency">Enter the amount:</label>
-            <input id="currency" type="number" class="form-control" value = 1>
+            <input id="currency" type="number" class="form-control" value="1">
           </div>
           <div class="form-group">
             <h3>Countries</h3>
             <select id="countries" class="form-control">
+              <option value=" "> </option>
               <option value= "INR">India</option>
               <option value="LYD">Libya</option>
               <option value="SSP">South Sudan</option>
@@ -26,8 +27,10 @@
           <button class="btn-success" typr= "submit" >Click</button>
         </form>
       </div>   
-      <div class="col-md-4">  
+      <div class="col-md-6">  
         <div>converted amount in your selected country:<span id="amount"></span></div>
+        <div>Your selected country cade:<span id="code"></span></div>
+        <div>Present rate of your selected country:<span id="rate"></span></div>
         <div class="showErrors"></div>
       </div> 
     </div>  
