@@ -13,30 +13,34 @@ function clearFields() {
 function getElements(response) {
   let amount =  parseInt($('#currency').val());
   let selectedCountry = $("#countries").val();
-  if(response.conversion_rates.USD >= 1 && selectedCountry === "INR"){
-    const convertedIndianAmount = amount * response.conversion_rates.INR;
-    $('#amount').text(convertedIndianAmount);
-  }
+  
+  if(response.conversion_rates){
+    if(response.conversion_rates.USD >= 1 && selectedCountry === "INR" ){
+      const convertedIndianAmount = amount * response.conversion_rates.INR;
+      $('#amount').text(convertedIndianAmount);
+    }
 
-  if(response.conversion_rates.USD >= 1 && selectedCountry === "LYD"){
-    const convertedLibiyaAmount = amount * response.conversion_rates.LYD;
-    $('#amount').text(convertedLibiyaAmount);
-  } 
+    if(response.conversion_rates.USD >= 1 && selectedCountry === "LYD" ){
+      const convertedLibiyaAmount = amount * response.conversion_rates.LYD;
+      $('#amount').text(convertedLibiyaAmount);
+    } 
 
-  if(response.conversion_rates.USD >= 1 && selectedCountry === "SSP"){
-    const convertedSudanAmount = amount * response.conversion_rates.SSP;
-    $('#amount').text(convertedSudanAmount);
-  } 
+    if(response.conversion_rates.USD >= 1 && selectedCountry === "SSP" ){
+      const convertedSudanAmount = amount * response.conversion_rates.SSP;
+      $('#amount').text(convertedSudanAmount);
+    } 
 
-  if(response.conversion_rates.USD >= 1 && selectedCountry === "SYP"){
-    const convertedSyriaAmount = amount * response.conversion_rates.SYP;
-    $('#amount').text(convertedSyriaAmount);
-  }
+    if(response.conversion_rates.USD >= 1 && selectedCountry === "SYP" ){
+      const convertedSyriaAmount = amount * response.conversion_rates.SYP;
+      $('#amount').text(convertedSyriaAmount);
+    }
 
-  if(response.conversion_rates.USD >= 1 && selectedCountry === "MUR"){
-    const convertedMauritiusAmount = amount * response.conversion_rates.MUR;
-    $('#amount').text(convertedMauritiusAmount);
-  } else {
+    if(response.conversion_rates.USD >= 1 && selectedCountry === "MUR"){
+      const convertedMauritiusAmount = amount * response.conversion_rates.MUR;
+      $('#amount').text(convertedMauritiusAmount);
+    } 
+
+  }else {
     $('.showErrors').text(`There was an error: ${response.message}`);
   } 
 }
