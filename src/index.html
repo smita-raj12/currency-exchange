@@ -5,20 +5,32 @@
 </head>
 <body>
   <div class="container">  
-    <h1>Currency Conveter</h1>
-    <label for="currency">Enter the amount:</label>
-    <input id="currency" type="number" value = 1>
-    <h3>Countries</h3>
-    <select id="countries">
-      <option value= "INR">India</option>
-      <option value="LYD">Libya</option>
-      <option value="SSP">South Sudan</option>
-      <option value="SYP">	Syria</option>
-      <option value="MUR">Mauritius</option>
-    </select>
-    <button class="btn-success" id="currencycheck">Click</button>
-    <div>converted amount in your selected country:<span id="amount"></span></div>
-    <div class="showErrors"></div>
-  </div>
+    <form id="currencycheck">
+      <h1>Currency Conveter</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="currency">Enter the amount:</label>
+            <input id="currency" type="number" class="form-control" value = 1>
+          </div>
+          <div class="form-group">
+            <h3>Countries</h3>
+            <select id="countries" class="form-control">
+              <option value= "INR">India</option>
+              <option value="LYD">Libya</option>
+              <option value="SSP">South Sudan</option>
+              <option value="SYP">	Syria</option>
+              <option value="MUR">Mauritius</option>
+            </select>
+          </div>
+          <button class="btn-success" typr= "submit" >Click</button>
+        </form>
+      </div>   
+      <div class="col-md-4">  
+        <div>converted amount in your selected country:<span id="amount"></span></div>
+        <div class="showErrors"></div>
+      </div> 
+    </div>  
+  </div> 
 </body>
 </html>

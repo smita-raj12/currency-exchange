@@ -13,7 +13,7 @@ function clearFields() {
 function getElements(response) {
   let amount =  parseInt($('#currency').val());
   let selectedCountry = $("#countries").val();
-  
+
   if(response.conversion_rates){
     if(response.conversion_rates.USD >= 1 && selectedCountry === "INR" ){
       const convertedIndianAmount = amount * response.conversion_rates.INR;
@@ -46,9 +46,9 @@ function getElements(response) {
 }
 
 $(document).ready(function() {
-  $('#currencycheck').click(function() {
+  $('form#currencycheck').submit(function(event) {
+    event.preventDefault();
     let amount = $('#currency').val();
-    
     clearFields();  
     CurrencyService.getCurrency(amount)
       .then(function(response) {
