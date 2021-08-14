@@ -104,7 +104,7 @@ with live server`
 
 ## Known bugs
 
-`None.`     
+`Live site is not working, try to fix it in future.`     
 
 ## License information with a copyright and date:
 
