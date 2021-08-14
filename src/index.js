@@ -5,6 +5,7 @@ import './css/styles.css';
 import CurrencyService from './currency.service.js';
 
 function getElements(response){
+
   if(response.target_code){
     $("#code").text(response.target_code)
     $("#rate").text(response.conversion_rate);
