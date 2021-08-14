@@ -20,19 +20,22 @@ This application is to create a currency exchange . A user should be able to typ
 - Users should be able to convert U.S. currency into at least 5 other types of currency.
 
 - If the API call results in an error (any message not a 200 OK), the application should return a notification to the user that states what the error is. (That means the error should show up in the DOM, not in the console.)
-- If the query response doesn't include that particular currency, the application should return a notification that states the currency in question doesn't exist. (Note: Even if you use a dropdown menu to specify currencies instead of a form field, you'll still need to add this functionality to your code.)
 
-Creating API Keys
-You will need to make an account and get an API key. Do not use someone else's API key. The "Free Plan" allows for 2000 API calls per month. That should be more than enough for this project, but avoid making excessive API calls (such as accidental infinite loops) during development.
+- If the query response doesn't include that particular currency, the application should return a notification that states the currency in question doesn't exist. 
 
-Visit the ExchangeRate-API site. Input your email address and click the "Get Free Key" button.
-You'll be prompted to create an account with your email, first name and a password. Agree to the terms of use and click "Get Started!"
-At this point, you'll be able to access a dashboard that includes your API key as well as your remaining API calls for the month.
-Setup Instructions
+### Creating API Keys
+
+You will need to make an account and get an API key. The "Free Plan" allows for 2000 API calls per month. That should be more than enough for this project, but avoid making excessive API calls (such as accidental infinite loops) during development.
+
+- Visit the ExchangeRate-API site. Input your email address and click the "Get Free Key" button.
+- You'll be prompted to create an account with your email, first name and a password. Agree to the terms of use and click "Get Started!"
+
+- At this point, you'll be able to access a dashboard that includes your API key as well as your remaining API calls for the month.
+
+### Setup Instructions
+
 Place your token in an .env file at the top level of your directory. (For grading purposes, name your API key variable API_KEY in .env. Keep spelling and capitalization identical, as it considerably speeds up the grading process.)
 Include .env in .gitignore.
-Use at least two JavaScript files: one for UI logic and one for service logic.
-This example assumes your API Key is stored in an API_KEY variable, as described in this lesson. In order to make your applications quick to grade, please follow the example exactly and do not rename your API_KEY variable to something different.
 
 
 ## Technologies used:

@@ -18,6 +18,7 @@ function getElements(response){
 
 $(document).ready(function() {
   $('form#currencycheck').submit(function(event) {
+    $("#output").show();
     event.preventDefault();
     let amount =  parseInt($('#currency').val());
     let selectedCountry = $("#countries").val();
