@@ -10,7 +10,6 @@ Smita
 
 [https://smita-raj12.github.io/currency-exchange](https://smita-raj12.github.io/currency-exchange)
 
-
 ## Description:
 
 This application is to create a currency exchange . A user should be able to type in an amount (in U.S. dollars) and then choose which currency it should be converted to (such as francs, marks, rupees, and so on).
