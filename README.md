@@ -34,7 +34,7 @@ You will need to make an account and get an API key. The "Free Plan" allows for 
 
 ### Setup Instructions
 
-Place your token in an .env file at the top level of your directory. (For grading purposes, name your API key variable API_KEY in .env. Keep spelling and capitalization identical, as it considerably speeds up the grading process.)
+Place your token in an .env file at the top level of your directory. ( name your API key variable API_KEY in .env. Keep spelling and capitalization identical, as it considerably speeds up the grading process.)
 Include .env in .gitignore.
 
 

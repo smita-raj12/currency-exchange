@@ -1,4 +1,5 @@
 #output{
+  padding-top: 40px;
   display: none;
 }
 
@@ -7,4 +8,21 @@ h1{
   text-align: center;
   padding-top: 10px;
   padding-bottom: 20px;
+}
+
+body{
+  background-color:lightyellow;
+}
+
+p{
+  width:max-content;
+  font-size: large;
+  font-style: bold;
+}
+
+.showErrors{
+  padding-top: 80px;
+  width:max-content;
+  color: red;
+  font-size:x-large;
 }

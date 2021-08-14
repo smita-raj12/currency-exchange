@@ -5,10 +5,10 @@
 </head>
 <body>
   <div class="container">  
-    <form id="currencycheck">
-      <h1>Currency Conveter</h1>
-      <div class="row">
-        <div class="col-md-4">
+    <h1>Currency Conveter</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <form id="currencycheck">
           <div class="form-group">
             <label for="currency">Enter the amount:</label>
             <input id="currency" type="number" class="form-control" value="1">
@@ -27,20 +27,21 @@
               <option value="NGN">Nigeria</option>
               <option value="NPR">Nepal</option>
               <option value="HKD">Hong Kong</option>
+              <option value="EGP">Egypt</option>
             </select>
           </div>
           <button class="btn-success" typr= "submit" >Click</button>
-        </form>
-      </div>   
-      <div class="col-md-6">  
+        </div>  
+      </form>
+      <div class="col-8">
         <div id="output">
-          <p>converted amount in your selected country:<span id="amount"></span></p>
-          <p>Your selected country cade:<span id="code"></span></p>
-          <p>Present rate of your selected country:<span id="rate"></span></p>
+          <p>Converted amount in your selected country : <span id="amount"></span></p>
+          <p>Your selected country code : <span id="code"></span></p>
+          <p>Present rate of your selected country : <span id="rate"></span></p>
         </div>
         <div class="showErrors"></div>
-      </div> 
+      </div>
     </div>  
-  </div> 
+  </div>    
 </body>
 </html>
